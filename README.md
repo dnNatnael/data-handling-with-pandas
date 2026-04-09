@@ -1,1 +1,7 @@
 # data-handling-with-pandas
+
+## `titanic/`
+The `titanic_analysis.ipynb` notebook analyzes the Titanic training data (`data/train.csv`) using a pandas-only workflow. It starts with dataset exploration (`.head()`, `.info()`, `.describe()`), then cleans the data by filling missing `Age` with the median, filling missing `Embarked` with the mode, dropping the `Cabin` column, and removing duplicate rows. It creates an `AgeGroup` feature using `pd.cut`, and uses `groupby` to compute survival rates by `Sex`, `Pclass`, and `AgeGroup`. Finally, it filters the data to answer the required questions (e.g., female survivors, children prioritized, and 1st-class survivors) and prints the key takeaways: female survival is 74.20%, best class is 1st (62.96%) and worst class is 3rd (24.24%), children (`Child (0-12)`) have higher survival than non-children (57.97% vs 38.84%), and the highest survival combination is `Sex=female`, `Pclass=1`, `AgeGroup=Teen (13-18)` with 100.00% survival.
+
+## `personal/`
+The `own_dataset_foundation.ipynb` notebook demonstrates building a custom pandas `DataFrame` from a Python dictionary. It defines 5 columns (features), creates 15 rows of sample data, assigns a custom index (`EMP_1` to `EMP_15`), and prints the resulting dataframe—showing the “own dataset foundation” workflow.
